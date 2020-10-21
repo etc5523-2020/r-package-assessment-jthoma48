@@ -7,7 +7,7 @@ library(dplyr)
 library(lubridate)
 library(leaflet)
 library(shinythemes)
-library(Test)
+library(cov20)
 
 
 #World data
