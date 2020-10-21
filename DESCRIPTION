@@ -6,9 +6,11 @@ Authors@R:
            family = "Thomas",
            role = c("aut", "cre"),
            email = "jtho0048@student.monash.edu")
-Description: What the package does (one paragraph).
+Description: This package includes a shiny app that has been created to visualize coronavirus case and death numbers from around the world. The package includes a function that allows a user to launch the shiny app and have an interactive experience with the app.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/etc5523-2020/r-package-assessment-jthoma48
+BugReports: https://github.com/etc5523-2020/r-package-assessment-jthoma48/issues
