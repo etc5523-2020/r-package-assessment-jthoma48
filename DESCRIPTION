@@ -18,8 +18,13 @@ Imports:
     shiny,
     dplyr,
     leaflet,
-    magrittr
+    magrittr,
+    plotly,
+    ggplot2,
+    lubridate,
+    shinythemes
 Depends: 
     R (>= 2.10)
 Suggests: 
-    testthat
+    testthat,
+    readr
