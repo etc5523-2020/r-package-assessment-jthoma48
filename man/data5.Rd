@@ -21,6 +21,6 @@ A data frame that consists of 2080 observations and 5 variables.
 data5
 }
 \description{
-A dataset displaying the changes in cumulative cases in all Australian states over a time period of January to October.
+A dataset displaying the changes in cumulative cases in all Australian states over a time period of February 2020 to October 2020.
 }
 \keyword{datasets}
