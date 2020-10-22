@@ -2,12 +2,12 @@
 #'
 #' @description This function launches a shiny app when executed by the user
 #' 
+#' @return A shiny app about coronavirus statistics around the world
+#' 
 #' @examples 
 #' \dontrun{
 #' launch_app()
 #' }
-#'
-#' @return A shiny app about coronavirus statistics around the world
 #' 
 #' @export
 launch_app <- function() {

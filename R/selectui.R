@@ -1,21 +1,21 @@
-#' Create functions to simplify repetitive calls for selectInputs in the user interface-side of a shiny app
+#' Simplify repetitive calls for selectInputs in the user interface-side of a shiny app
+#' 
+#' @description This function is used to display a drop-down list of options for a user to select either states/countries to visualize coronavirus statistics.
 #' 
 #' @aliases selectui02 selectui03
 #' 
+#' @param inputId An id that is unique in the user interface-side in order for the server side of the shiny app to call on.
+#' 
 #' @return A selectInput option
+#' 
+#' @importFrom shiny selectInput
+#' @importFrom dplyr filter
 #' 
 #' @examples 
 #' inputId <- state
 #' selectui01("state")
-#' inputId <- countriesp
-#' selectui02("countriesp")
 #' inputId <- country
 #' selectui03("country")
-#' 
-#' @param inputId An id that is unique in the user interface-side in order for the server side of the shiny app to call on.
-#'
-#' @importFrom shiny selectInput
-#' @importFrom dplyr filter
 #' 
 #' @export
 selectui01 <- function(inputId) {

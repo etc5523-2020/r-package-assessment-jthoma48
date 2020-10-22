@@ -16,7 +16,9 @@ URL: https://github.com/etc5523-2020/r-package-assessment-jthoma48
 BugReports: https://github.com/etc5523-2020/r-package-assessment-jthoma48/issues
 Imports: 
     shiny,
-    dplyr
+    dplyr,
+    leaflet,
+    magrittr
 Depends: 
     R (>= 2.10)
 Suggests: 

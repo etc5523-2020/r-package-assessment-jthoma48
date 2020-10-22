@@ -101,8 +101,7 @@ server <- function(input, output, session) {
   
   output$mymap<- renderLeaflet({
     
-    leaflet(data5) %>% addTiles() %>% 
-      addCircleMarkers(~Long, ~Lat, popup = ~State, color = "blue", opacity = 0.7)
+    leafserv(data5$Long,data5$Lat,data5$State)
     
   })
   

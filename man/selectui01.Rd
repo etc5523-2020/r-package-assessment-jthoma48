@@ -4,7 +4,7 @@
 \alias{selectui01}
 \alias{selectui02}
 \alias{selectui03}
-\title{Create functions to simplify repetitive calls for selectInputs in the user interface-side of a shiny app}
+\title{Simplify repetitive calls for selectInputs in the user interface-side of a shiny app}
 \usage{
 selectui01(inputId)
 }
@@ -15,13 +15,11 @@ selectui01(inputId)
 A selectInput option
 }
 \description{
-Create functions to simplify repetitive calls for selectInputs in the user interface-side of a shiny app
+This function is used to display a drop-down list of options for a user to select either states/countries to visualize coronavirus statistics.
 }
 \examples{
 inputId <- state
 selectui01("state")
-inputId <- countriesp
-selectui02("countriesp")
 inputId <- country
 selectui03("country")
 
