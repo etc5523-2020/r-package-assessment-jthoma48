@@ -1,3 +1,8 @@
+#install packages
+if(!requireNamespace("readr", quietly = TRUE)){
+  stop("Please install {readr} to use the app.")
+}
+
 library(tidyverse)
 library(readr)
 library(shiny)
