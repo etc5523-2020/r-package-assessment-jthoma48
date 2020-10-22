@@ -20,7 +20,6 @@ Imports:
     leaflet,
     magrittr,
     plotly,
-    ggplot2,
     lubridate,
     shinythemes
 Depends: 
@@ -30,5 +29,6 @@ Suggests:
     readr,
     knitr,
     rmarkdown,
+    ggplot2,
     kableExtra
 VignetteBuilder: knitr
