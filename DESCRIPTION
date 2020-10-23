@@ -1,16 +1,34 @@
-Package: yourPkg
-Title: What the Package Does (One Line, Title Case)
+Package: cov20
+Title: Visualize coronavirus statistics from around the world
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Justin",
+           family = "Thomas",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "jtho0048@student.monash.edu")
+Description: This package includes a shiny app that has been created to visualize coronavirus case and death numbers from around the world. The package includes a function that allows a user to launch the shiny app and have an interactive experience with the app.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/etc5523-2020/r-package-assessment-jthoma48
+BugReports: https://github.com/etc5523-2020/r-package-assessment-jthoma48/issues
+Imports: 
+    shiny,
+    dplyr,
+    leaflet,
+    magrittr,
+    plotly,
+    lubridate,
+    shinythemes
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat,
+    readr,
+    knitr,
+    rmarkdown,
+    kableExtra,
+    ggplot2
+VignetteBuilder: knitr

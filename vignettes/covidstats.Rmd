@@ -1,0 +1,111 @@
+---
+title: "cov20: A package that launches a shiny app visualizing coronavirus statistics in 2020"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{cov20: A package that launches a shiny app visualizing coronavirus statistics in 2020}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 8
+)
+```
+
+```{r setup}
+library(cov20)
+```
+
+# **Package Introduction**
+
+This package allows users to launch an app that will allow them to interactively visualize coronavirus statistics reported in 2020 from around the world. The package includes a function for users to launch the app. The user just has to type the function `launch_app()` in their console pane in RStudio to get the app up and running. 
+
+## **How to launch the app**
+
+```r
+launch_app()
+```
+
+## **Brief overview of what the app does**
+
+The app provides an interactive interface for the user to have a hands-on experience as they visualize coronavirus statistics around the world. The app has a 5 different sections:
+
+- **About:** This section gives an introduction to the app
+- **Cases in Australia:** This section has a map of Australia, followed by a line graph detailing the change in cumulative case count from January 2020 to October 2020. There is an option for the user to select which Australian state they want to see and the line graph updates accordingly.
+- **Cases around the world:** This section has a line graph that shows the change in daily new cases and cumulative cases reported from January 2020 to October 2020 for 235 countries. The user can select from a drop-down list which country they want to visualize and which date range they want to focus on. The line chart updates according to the input given by the user.
+- **COVID-19 statistics around the world:** This section displays a table that shows the total cases and deaths reported as of October 6, 2020. The user can select from a drop-down list which country they want to see. The table will update accordingly.
+- **Sources:** This section gives credit to organizations that have recorded coronavirus information. The datasets used in this app have been taken from these sources.
+
+## **Guidelines for use**
+
+The `cov20` package has 3 datasets that can be used for different purposes. 
+
+### **Data2 dataset**
+
+This dataset contains information that shows the changes in cumulative cases and deaths over time for `r length(unique(data2$Country))` countries. This data is sourced from [World Health Organization](https://covid19.who.int/)
+
+The dataset can be accessed by:
+```r
+library(cov20)
+data2
+```
+
+#### **Example to explore data2 dataset**
+
+```{r}
+library(ggplot2)
+library(dplyr)
+ggplot(data = filter(data2, Country == "Albania"), aes(x = Date_reported)) +
+    geom_line(aes(y = Cumulative_cases), color = "red") +
+    geom_col(aes(y = New_cases), color = "grey", alpha = 0.8) +
+    ylab("No. of cases") +
+    xlab("Month") +
+    ggtitle("Total and daily confirmed cases in Albania") +
+    theme(plot.title = element_text(hjust = 0.5, color = "black"))
+```
+
+
+### **Data3 dataset**
+
+This dataset contains information that shows the cumulative cases and deaths for `r length(unique(data2$Country))` countries. This data is sourced from [World Health Organization](https://covid19.who.int/)
+
+The dataset can be accessed by:
+```r
+library(cov20)
+data3
+```
+
+#### **Example to explore data3 dataset**
+
+```{r}
+data3 %>% head(10)
+```
+
+
+### **Data5 dataset**
+
+This dataset displays the changes in cumulative cases in all Australian states over a time period of February 2020 to October 2020. This data is sourced from [HDX](https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases#)
+
+The dataset can be accessed by:
+```r
+library(cov20)
+data5
+```
+
+#### **Example to explore data5 dataset**
+
+```{r}
+library(ggplot2)
+ggplot(data = filter(data5, State == "Victoria"), aes(x = Date, y = `Cumulative Cases`)) +
+      geom_line(color = "red") +
+      scale_x_date(date_breaks = "1 month", date_labels = c("October", "February", "March", "April", "May", "June", "July", "August", "September")) +
+      ylab("No. of cases") +
+      xlab("Month") +
+      ggtitle("Cumulative cases for Victoria") +
+      theme(plot.title = element_text(hjust = 0.5, color = "black"))
+```
+
