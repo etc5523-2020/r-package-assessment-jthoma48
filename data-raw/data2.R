@@ -8,7 +8,7 @@ library(dplyr)
 library(lubridate)
 
 
-data2 <- read.csv(system.file("extdata", "WHO-COVID-19-global-data.csv", package = "cov20"))
+data2 <- read_csv(system.file("extdata", "WHO-COVID-19-global-data.csv", package = "cov20"))
 data2$Date_reported <- as.Date(data2$Date_reported)
 
 usethis::use_data(data2, overwrite = TRUE)
