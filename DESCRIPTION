@@ -29,6 +29,6 @@ Suggests:
     readr,
     knitr,
     rmarkdown,
-    ggplot2,
-    kableExtra
+    kableExtra,
+    ggplot2
 VignetteBuilder: knitr
