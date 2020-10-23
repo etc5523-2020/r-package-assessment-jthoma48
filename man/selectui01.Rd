@@ -9,18 +9,22 @@
 selectui01(inputId)
 }
 \arguments{
-\item{inputId}{An id that is unique in the user interface-side in order for the server side of the shiny app to call on.}
+\item{inputId}{An id name that is unique in the user interface-side in order for the server side of the shiny app to call on.}
 }
 \value{
 A selectInput option
 }
 \description{
-This function is used to display a drop-down list of options for a user to select either states/countries to visualize coronavirus statistics.
+This function is used to display a drop-down list of options for a user to select either states/countries to visualize coronavirus statistics. The options to select from come from data2, data3 and data5.
 }
 \examples{
-inputId <- state
+\dontrun{
+inputId <- "state"
 selectui01("state")
-inputId <- country
+}
+\dontrun{
+inputId <- "country"
 selectui03("country")
+}
 
 }
