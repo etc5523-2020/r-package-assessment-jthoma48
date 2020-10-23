@@ -47,7 +47,7 @@ The `cov20` package has 3 datasets that can be used for different purposes.
 This dataset contains information that shows the changes in cumulative cases and deaths over time for `r length(unique(data2$Country))` countries. This data is sourced from [World Health Organization](https://covid19.who.int/)
 
 The dataset can be accessed by:
-```{r}
+```r
 library(cov20)
 data2
 ```
@@ -72,7 +72,7 @@ ggplot(data = filter(data2, Country == "Albania"), aes(x = Date_reported)) +
 This dataset contains information that shows the cumulative cases and deaths for `r length(unique(data2$Country))` countries. This data is sourced from [World Health Organization](https://covid19.who.int/)
 
 The dataset can be accessed by:
-```{r}
+```r
 library(cov20)
 data3
 ```
@@ -89,7 +89,7 @@ data3 %>% head(10)
 This dataset displays the changes in cumulative cases in all Australian states over a time period of February 2020 to October 2020. This data is sourced from [HDX](https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases#)
 
 The dataset can be accessed by:
-```{r}
+```r
 library(cov20)
 data5
 ```
